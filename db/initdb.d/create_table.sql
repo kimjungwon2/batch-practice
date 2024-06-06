@@ -1,4 +1,4 @@
-CREATE TABLE `package`
+CREATE TABLE pass_local.package
 (
     `package_seq`  int         NOT NULL AUTO_INCREMENT COMMENT '패키지 순번',
     `package_name` varchar(50) NOT NULL COMMENT '패키지 이름',
@@ -9,7 +9,7 @@ CREATE TABLE `package`
     PRIMARY KEY (`package_seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='패키지';
 
-CREATE TABLE `pass`
+CREATE TABLE pass_local.pass
 (
     `pass_seq`        int         NOT NULL AUTO_INCREMENT COMMENT '이용권 순번',
     `package_seq`     int         NOT NULL COMMENT '패키지 순번',
@@ -24,7 +24,7 @@ CREATE TABLE `pass`
     PRIMARY KEY (`pass_seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='이용권';
 
-CREATE TABLE `booking`
+CREATE TABLE pass_local.booking
 (
     `booking_seq`  int         NOT NULL AUTO_INCREMENT COMMENT '예약 순번',
     `pass_seq`     int         NOT NULL COMMENT '이용권 순번',
@@ -40,7 +40,7 @@ CREATE TABLE `booking`
     PRIMARY KEY (`booking_seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='예약';
 
-CREATE TABLE `user`
+CREATE TABLE pass_local.user
 (
     `user_id`     varchar(20) NOT NULL COMMENT '사용자 ID',
     `user_name`   varchar(50) NOT NULL COMMENT '사용자 이름',
