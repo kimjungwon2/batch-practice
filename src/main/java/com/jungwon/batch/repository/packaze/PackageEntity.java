@@ -1,5 +1,6 @@
 package com.jungwon.batch.repository.packaze;
 
+import com.jungwon.batch.repository.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "package")
-public class PackageEntity {
+public class PackageEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
